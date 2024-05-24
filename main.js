@@ -88,7 +88,21 @@ window.onload=()=>{
     newTaskInput.value="";
 }
 
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
+function momodal(){
+    document.getElementById("nenmodal-1").classList.toggle("active");
+    }
+
+//login form
+const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === '1' && password === '1') {
+        window.location.href = 'mainPage.html';
+    } else {
+        alert('Invalid username or password');
+    }
+});

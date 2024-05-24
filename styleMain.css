@@ -6,24 +6,33 @@
     box-sizing: border-box;
   }
   .navigation {
-      list-style-type: none;
+      display: flex;
       overflow: hidden;
       background-color: #ff9933;
-      margin-top: 20px;
+      justify-content: space-between;
+
     }
     .nav-box{
       display: flex;
-      flex-wrap: wrap;
-      margin: auto 290px auto 290px;
-      flex-direction: wrap;
+  
+      
+    }
+    .btn-box{
+      display: flex;
+      list-style: none;
+      margin: 0 290px 0 290px;
+      
     }
     .nav-btn {
-      display:block;
+      display:flex;
       color: white;
       padding: 14px 10px 20px 10px;
       text-decoration: none;
       margin: 0 10px 0 10px; 
       flex-wrap: wrap;
+      justify-content: center;
+      width: 120px;
+      
     }
     
     .nav-btn:hover:not(.active) {
@@ -41,70 +50,147 @@
       padding-top:20px;
       
   }
+  .brand{
+    padding:none;
+    flex-direction:row;
+    margin: 0 0 0 290px ;
+    
+  }
   .label {
-      margin: 50px auto auto 20px;
       position:absolute;
       font-size: 30px;
+      padding: 20px;
+      margin-top: 20px;
   }
   .logo{
-      width: 100px;
-      position: relative;
-      margin: 45px 0 0 300px;
+      width: 140px;
+      margin: 10px;
   }
-  .brand{
-    padding: 0 290px 0 0;
-    flex-direction:row;
+ 
+ /* CSS nền hiển thị Modal */
+.nenmodal .nenmodal2 {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  z-index:2;
+  display:none;
   }
-   /* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
+  /* CSS bảng nội dung Modal */
+  .nenmodal .ndmodal {
+  position:static;
+  top:50%;
+  left:50%;
+  transform:translate(100%,100%) scale(0);
+  background:#fff;
+  width:1200px;
+  z-index:2;
+  text-align:center;
+  padding:10px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+  border-radius:10px;
+  display:block;
+  flex-wrap: wrap;
   position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
+  box-shadow:0px 0px 2px #111;
+  }
+  /* @media(max-width:740){
+    .nenmodal .ndmodal {width: 50px;margin-top: 120px;
+    }
+    } */
+  @media (min-width: 740px ) and (max-width:1024px){
+    .nenmodal .ndmodal {width: 620px;margin: 450px 0 0 0;
+    }
+    .btn-box{
+      margin: 0;
+    }
+    }
+    
+  @media (min-width: 1024px ) and (max-width:1920px){
+  .nenmodal .ndmodal {width: 1200px;margin: 130px 0 0 0;
+  }
+  }
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+  /* CSS bao bọc của nút tắt Modal */
+  .nenmodal .closemodal {
+  text-align:right;
+  margin-right:-40px;
+  margin-bottom:-35px;
+  }
+  /* CSS tieu de của Modal */
+  .titlemodal{
+  font-weight:bold;
+  font-size:20px;
+  margin-bottom:10px;
+  }
+  /* CSS nút tắt modal */
+  .closemodal button{
+  width:50px;
+  height:40px;
+  font-size:30px;
+  padding:0px;
+  border-radius:20%;
+  background:#ff0000;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  }
+  .closemodal button:hover{
+  background-color:#cc0000
+  }
+  .nenmodal.active .nenmodal2 {
+  display:block;
+  }
+  /* CSS hiệu ứng hiển thị Modal */
+  .nenmodal.active .ndmodal {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+  }
+  .btn{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+  }
+  .furnitures{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: Inter,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: none;
+    touch-action: manipulation;
+  }
+  .furnitures:hover{
+    box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  }
+  .items-box td{
+    display: inline-flex;
+    flex-wrap: wrap;
+  
+  }
+  .items{
+    display: inline-flex;
+    width: 280px;
+    height: 280px;
+    border: 2px solid black;
+    margin: 5px;
+  }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
 /* } */

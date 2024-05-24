@@ -11,24 +11,60 @@
     wesome/6.5.2/css/all.min.css">
     <!-- <link rel='stylesheet' href='style2.css'> -->
     
+</head>
+<body>
     <div class="brand">
         <img src="/hinh/logoF1.png" alt="logo" class="logo">
         <a class="label">Phuc <br />Furniture</a>
     </div>
-    <ul class="navigation">
-        <div class="nav-box">
-            <li><a class="nav-btn active" href="mainpage.html" >Home ne ne</a></li>
+    <div class="nav-box"></div>
+        <ul class="navigation">     
+            <ul class="btn-box">
+            <li><a class="nav-btn active" href="mainPage.html">Home</a></li>
             <li><a class="nav-btn" href="todo.html" >To-do list</a></li>
-            <li><a class="nav-btn" href="login.html" >Login</a></li>
-        </div>
+            </ul>
+            <ul class="btn-box">
+            <li><a class="nav-btn" href="login.html">Login</a></li>
+          </ul>   
     </ul>
 </div>
-</head>
-<body>
     <h1>Furniture list</h1>
-    <div class="popup" onclick="myFunction()">Click me!
-        <span class="popuptext" id="myPopup">Popup text...</span>
-      </div>
-    <script src="main.js"></script>
+        <div class="btn">
+            <button class="furnitures" onclick="momodal()">Chair</button>
+        </div>
+        <div class="nenmodal" id="nenmodal-1">
+            <div class="nenmodal2"></div>
+                <div class="ndmodal">
+                    <div class="titlemodal">Chair list </div>
+                        <table>
+                            <tbody>
+                            <tr>
+                            <td>
+                            <table class="items-box">
+                            <tbody>
+                            <tr>
+                            <td><img class="items" src="hinh/chair1.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair2.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair3.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair4.jpg" alt=""></td>
+                            </tr>
+                            <tr>
+                            <td><img class="items" src="hinh/chair5.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair6.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair7.jpg" alt=""></td>
+                            <td><img class="items" src="hinh/chair8.jpg" alt=""></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                
+                    <div class="closemodal"><button onclick="momodal()">×</button></div>
+                </div>
+            </div>
+<!-- html modal -->
+<script src="main.js"></script>
 </body>
 </html>
