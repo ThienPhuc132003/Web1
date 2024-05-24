@@ -23,7 +23,7 @@ const addTask = () => {
 <input type="checkbox" class="task-check">
 <span class="taskname">${taskName}</span>
 <button class="edit">
-<i class="fa-solid fa-pen-to-square"></i>
+<i class="fa-solid fa-pen-to-square">edit</i>
 </button>
 <button class="delete">
 <i class="fa-solid fa-square-minus"></i>
