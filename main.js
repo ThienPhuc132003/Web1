@@ -26,7 +26,7 @@ const addTask = () => {
 <i class="fa-solid fa-pen-to-square">edit</i>
 </button>
 <button class="delete">
-<i class="fa-solid fa-square-minus"></i>
+<i class="fa-solid fa-square-minus">Delete</i>
 </button>
 </div>`;
 
